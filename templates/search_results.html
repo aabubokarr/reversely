@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .query-image { margin: 20px 0; }
+        .results { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .image-card { border: 1px solid #ddd; padding: 10px; text-align: center; }
+        .image-card img { max-width: 100%; height: auto; }
+        .similarity { color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results</h1>
+        
+        <div class="query-image">
+            <h3>Query Image:</h3>
+            <img src="{{ url_for('static', filename='uploads/' + query_image) }}" alt="Query" style="max-width: 300px;">
+        </div>
+        
+        <h3>Similar Images:</h3>
+        <div class="results">
+            {% for result in results %}
+            <div class="image-card">
+                <img src="{{ url_for('static', filename='uploads/' + result.filename) }}" alt="Result">
+                <div class="similarity">Similarity: {{ "%.2f"|format(result.similarity * 100) }}%</div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <br>
+        <a href="{{ url_for('search_images') }}">New Search</a> | 
+        <a href="{{ url_for('index') }}">Home</a>
+    </div>
+</body>
+</html>

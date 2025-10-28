@@ -1,38 +1,107 @@
-# Reverse Image Search Application
+# Reversly - Reverse Image Search Application
 
-## Overview
+Welcome to the **Reversely** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
-This project provides a **Reverse Image Search** functionality where users can upload an image and receive a list of similar images based on the content of the uploaded image. The frontend is built using **HTML**, **CSS**, and **JavaScript** with **Ant Design** for UI components. The backend is developed in **Django** with a **TensorFlow MobileNet** model used for extracting image features and finding similar images based on cosine similarity.
+## Table of Contents
+
+- [Visit](#visit)
+- [About](#about)
+- [Features](#features)
+- [Technology](#technology)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Structure](#structure)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Visit
+
+- [Vercel](https://reversely0.vercel.app/)
+
+## About
+
+**Reversely** is a reverse image search application where user can upload their images and search using similar images.
+
+## Technology
+- *Frontend*: HTML, CSS
+- *Backend*: Flask
 
 ## Features
 
-- **Image Upload**: Allows users to upload an image for reverse image search.
-- **Similar Images Display**: Displays images that are similar to the uploaded image, with a similarity score.
-- **Image Preview**: View the uploaded and similar images in a preview modal without navigating to a new page.
-- **Ant Design UI**: A modern, user-friendly interface using Ant Design components.
+- Image Upload
+- Reverse Image Search
 
-## Technologies Used
+## Installation
 
-- **Frontend**: HTML, CSS, JavaScript, Ant Design (for UI components)
-- **Backend**: Django, TensorFlow (MobileNet model), NumPy, SciPy
-- **Image Processing**: TensorFlow MobileNet model for feature extraction and cosine similarity calculation
-- **Image Storage**: Images are stored in Django's `MEDIA_ROOT` and uploaded to the server
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/woabu0/reversely.git
+   ```
+2. Navigate to the reversely directory:
+   ```bash
+   cd reversely
+   ```
+3. Install requirements.txt:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Backend Setup
+## Usage
 
-The backend is responsible for processing the uploaded image, extracting features using the MobileNet model, and finding similar images based on those features.
+1. Start the application:
+   ```bash
+   python app.py
+   ```
+2. Open your browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
 
-### Requirements
+## Structure
 
-- **Django**: Used to create the backend API and serve the frontend.
-- **TensorFlow**: Used for image feature extraction via the MobileNet model.
-- **NumPy**: For array handling during feature extraction.
-- **SciPy**: To calculate cosine similarity between images.
-- **Pillow (PIL)**: For loading and processing images.
+    ```
+    server/
+    ├── app.py
+    ├── utils.py
+    ├── requirements.txt
+    ├── templates/
+    │   ├── index.html
+    │   ├── upload.html
+    │   ├── search.html
+    │   └── search_results.html
+    └── static/
+        ├── uploads/
+        └── features/
+    ```
 
-### Installation and Configuration
+## Contributors
 
-1. **Install Dependencies**:
+<p align="center">
+  <a href="https://github.com/woabu0/reversely/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=woabu0/reversely" alt="Contributors" />
+  </a>
+</p>
 
-```bash
-pip install django tensorflow numpy scipy pillow
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

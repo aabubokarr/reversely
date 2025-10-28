@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Search Engine</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .nav { margin: 20px 0; }
+        .nav a { margin-right: 20px; text-decoration: none; color: #007bff; }
+        .nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Search Engine</h1>
+        <div class="nav">
+            <a href="{{ url_for('upload_image') }}">Upload Images</a>
+            <a href="{{ url_for('search_images') }}">Search Images</a>
+        </div>
+        <p>Upload images and search using similar image matching.</p>
+    </div>
+</body>
+</html>
