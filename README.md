@@ -7,9 +7,7 @@ Welcome to the **Reversely** project! This README provides an overview of the pr
 - [Visit](#visit)
 - [About](#about)
 - [Features](#features)
-- [Technology](#technology)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Structure](#structure)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
@@ -17,69 +15,60 @@ Welcome to the **Reversely** project! This README provides an overview of the pr
 
 ## Visit
 
-- [Vercel](https://reversely0.vercel.app/)
+- [Repository](https://github.com/aabubokarr/reversely)
 
 ## About
 
-**Reversely** is a reverse image search application where user can upload their images and search using similar images.
-
-## Technology
-- *Frontend*: HTML, CSS
-- *Backend*: Flask
+**Reversely** is a desktop reverse image search application that uses AI-powered visual embeddings to find visually similar images in your local media library. Built with Python and PySide6, it provides fast, private, and offline image discovery.
 
 ## Features
 
 - Image Upload
 - Reverse Image Search
+- Image Similarity Check
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/woabu0/reversely.git
+   git clone https://github.com/aabubokarr/reversely.git
    ```
 2. Navigate to the reversely directory:
    ```bash
    cd reversely
    ```
-3. Install requirements.txt:
+3. Install dependencies:
    ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+
+   python -m pip install --upgrade pip
    pip install -r requirements.txt
    ```
-
-## Usage
-
-1. Start the application:
+4. Run the application:
    ```bash
    python app.py
-   ```
-2. Open your browser and navigate to:
-   ```
-   http://localhost:5000
    ```
 
 ## Structure
 
-    ```
-    server/
-    ├── app.py
-    ├── utils.py
-    ├── requirements.txt
-    ├── templates/
-    │   ├── index.html
-    │   ├── upload.html
-    │   ├── search.html
-    │   └── search_results.html
-    └── static/
-        ├── uploads/
-        └── features/
-    ```
+```
+reversely/
+├── media/                    # Images for testing
+├── .gitignore                # Git ignore rules
+├── app.py                    # Main desktop application
+├── LICENSE                   # Project license
+├── README.md                 # Project documentation
+├── requirements.txt          # Python dependencies
+├── search_engine.py          # AI image embedding and similarity search
+└── utils.py                  # Image processing utilities
+```
 
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/woabu0/reversely/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=woabu0/reversely" alt="Contributors" />
+  <a href="https://github.com/aabubokarr/reversely/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aabubokarr/reversely" alt="Contributors" />
   </a>
 </p>
 
